@@ -1,0 +1,186 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 700;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+:root {
+
+    /* Layout */
+    --mobile-width: 375px;
+    --desktop-width: 1440px;
+
+    /* Colors */
+
+    /* Primary */
+    --primary-dark-cyan: hsl(158, 36%, 37%);
+    --primary-cream: hsl(30, 38%, 92%);
+
+    /* Neutral */
+    --neutral-very-dark-blue: hsl(212, 21%, 14%);
+    --neutral-dark-grayish-blue: hsl(228, 12%, 48%);
+    --neutral-white: hsl(0, 0%, 100%);
+
+    /* Typography */
+    --font-size-paragraph: 14px;
+}
+
+/* Front-end Style Guide */
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: var(--font-size-paragraph);
+
+    color: var(--neutral-dark-grayish-blue);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--primary-cream);
+}
+
+#container {
+    display: flex;
+    background-color: var(--neutral-white);
+    width: 600px;
+    height: 450px;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+#description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+#description p:nth-child(1) {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+#description h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    line-height: 100%;
+    color: var(--neutral-very-dark-blue);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+figure {
+    width: 300px;
+    height: auto;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    background-color: var(--primary-dark-cyan);
+    color: var(--neutral-white);
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+button img {
+    width: 1rem;
+    height: auto;
+}
+
+#price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#price-after {
+    color: var(--primary-dark-cyan);
+    font-weight: 700;
+    font-family: "Fraunces", serif;
+    font-size: 2rem;
+}
+
+#price-before {
+    color: var(--neutral-dark-grayish-blue);
+    text-decoration: line-through;
+}
